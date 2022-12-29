@@ -1,0 +1,3 @@
+file$(whoami).jpg
+file`whoami`.jpg
+file.jpg||whoami
