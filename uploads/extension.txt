@@ -28,7 +28,6 @@ inc
 asp
 aspx
 config
-cer and .asa 
 aspx;1.jpg 
 soap
 jpg.php
