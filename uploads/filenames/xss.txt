@@ -1,1 +1,2 @@
 <script>alert(window.origin);</script>
+<img src=x onerror=alert(window.origin)>
