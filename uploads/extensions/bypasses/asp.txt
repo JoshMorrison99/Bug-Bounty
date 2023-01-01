@@ -1,2 +1,4 @@
 asp
 aspx
+cer
+asa
