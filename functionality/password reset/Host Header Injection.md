@@ -3,9 +3,11 @@
 Enter email of test account B for password reset.
 
 ************Step 2************
+
 Intercept the POST request
 
 ************Step 3************
+
 Change the Referer header to interactsh-client 
 
 ************Step 4************
