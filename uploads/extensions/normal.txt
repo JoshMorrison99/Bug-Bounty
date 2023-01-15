@@ -6,3 +6,5 @@ svg
 xml
 config
 htaccess
+shtml
+shtm
