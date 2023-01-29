@@ -7,3 +7,4 @@ demo
 root
 admin' -- -
 admin@domain.com
+guest
