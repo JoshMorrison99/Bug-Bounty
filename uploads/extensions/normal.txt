@@ -8,3 +8,4 @@ config
 htaccess
 shtml
 shtm
+xslt
