@@ -193,7 +193,7 @@ Content-Type: text/html
 -----------------------------4829104394923874193918493216
 ```
 
-#### XSLT Extention Allowed
+#### XSLT Extention Allowed (TODO)
 Extensible Stylesheet Language Transformations (XSLT) is an XML-based language usually used when transforming XML documents into HTML, another XML document, or PDF. 
 ```
 POST /upload HTTP/1.1
