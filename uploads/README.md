@@ -217,6 +217,12 @@ Content-Type: image/svg+xml
 -----------------------------4829104394923874193918493216
 ```
 
+#### EXIF Data Not Being Stripped
+EXIF (Exchangeable Image File Format) data is metadata embedded in a photo file that contains information about the camera, settings, and other details used to capture the image. This information can include the camera model, aperture, shutter speed, ISO, date and time, GPS location, lens type, and more. If the EXIF data is not being stripped, it may be a vulnerability in itself depending on the situation. You may also be able to get XSS through the metadata.
+```
+exiftool -Comment=' "><img src=1 onerror=alert(window.origin)>' profile.jpg
+```
+
 # Bypasses
 
 #### Keeping The Image Header 
