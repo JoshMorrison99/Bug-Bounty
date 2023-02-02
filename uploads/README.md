@@ -1,3 +1,7 @@
+An incomplete mind map for file uploads
+![File Upload](https://user-images.githubusercontent.com/25315255/216388504-52bb0eaf-0625-4bdb-9158-694b530961bd.png)
+
+
 #### HTML Extention Allowed - XSS
 ```
 POST /upload HTTP/1.1
