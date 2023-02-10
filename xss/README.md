@@ -18,9 +18,9 @@ ASP.NET |  `@Html.Raw()`
 Rails | `raw` or `html_safe`
 Laravel | `echo`
 
-Disabling the autoescaping feature is commonly seen in functionality where users have the ability to edit HTML such as a blog website. Other than disabling the auto escape feature, these frameworks are also all vulnerable to XSS if the user's input is passed into an href tag like so: `<a href=XSS>Website</a>`. This like of functionality is commonly seen in user's profile where the website allows the user to add a link to their own website.
+Disabling the autoescaping feature is commonly seen in functionality where users have the ability to edit HTML such as a blog website. Other than disabling the auto escape feature, these frameworks are also all vulnerable to XSS if the user's input is passed into an href tag like so: `<a href=XSS>Website</a>`. This kind of functionality is commonly seen in user's profile where the website allows the user to add a link to their own website.
 
-To hunt for application that are not using frameworks, I will use a combination of Google Dorking and command line tools to get URLs with certain extentions. If a webpage has one of the following extensions, then this means that the developer had to go out of their way to prevent XSS.
+To hunt for applications that are not using frameworks, I will use a combination of Google Dorking and command line tools to get URLs with certain extentions. If a webpage has one of the following extensions, then this means that the developer had to go out of their way to prevent XSS.
 
 Here are the Google Dorks I use to hunt for XSS:
 ```
