@@ -1,2 +1,0 @@
-"<%= 7*7 %>"@example.com
-test+(${{7*7}})@example.com
