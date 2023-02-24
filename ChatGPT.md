@@ -27,3 +27,15 @@ A web developer might give the session cookie a value of SameSite: none for scen
 By setting the SameSite attribute to "none," the cookie can be accessed by other websites, allowing for a seamless user experience, such as when an embedded payment gateway needs to be accessed from a different domain. If the SameSite attribute is not set to "none," then cross-site requests will fail, which can cause issues for the user and potentially break functionality on the website.
 
 However, it's important to note that setting SameSite: none can also introduce some security concerns as it makes the cookie more vulnerable to Cross-Site Request Forgery (CSRF) attacks. As a result, it is recommended that developers implement additional security measures such as implementing anti-CSRF tokens to mitigate these risks.
+
+<br/>
+
+**Question 3**
+```
+is IIS 10 vulnerable to shortname scanning
+```
+IIS 10, like its predecessors, is vulnerable to shortname scanning attacks, which is also known as 8.3 filename enumeration or file/folder name bruteforcing. This vulnerability stems from the legacy support for the 8.3 naming convention used in older versions of Windows.
+
+Shortname scanning is a technique that allows an attacker to map the directory structure of a web server by guessing short filenames that match long filenames. By brute-forcing these short filenames, an attacker can determine the existence and location of files and directories that may not be otherwise accessible. This vulnerability can be used for various types of attacks, such as reconnaissance, information disclosure, and potentially even remote code execution.
+
+To mitigate the risk of shortname scanning attacks, Microsoft recommends disabling 8.3 filename generation for all volumes that contain web content. This can be done using the command line tool "fsutil". Additionally, keeping IIS up to date with the latest security patches and following best practices for web server security can help reduce the risk of exploitation.
