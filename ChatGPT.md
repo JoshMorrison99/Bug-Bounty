@@ -167,3 +167,19 @@ Troubleshooting: If you are experiencing issues with the website, providing your
 
 Overall, providing your original host name can help the website provide a better and more secure user experience. However, it is always important to be cautious about sharing personal information online and to only provide information to websites that you trust.
 
+<br/>
+
+**Question 12**
+```
+How come when I send: "Location: test.com%0D%0A" it is being encoded to "Set-Cookie: location=test.com%250D%250A; Path=/" in the response. I am not doing any protection against CRLF in my express applicaiton
+```
+
+
+The reason why your Location header value is being encoded to test.com%250D%250A instead of being interpreted as a CRLF sequence is because Express.js automatically encodes any special characters in HTTP header values to prevent header injection attacks.
+
+In this case, the %0D%0A sequence is the URL-encoded representation of the CRLF characters, and Express.js is encoding it to %250D%250A, which is the URL-encoded representation of the %0D%0A sequence.
+
+By automatically encoding special characters in HTTP header values, Express.js is helping to prevent CRLF injection attacks, which are a type of vulnerability where an attacker is able to inject CRLF characters into the response headers or response body of an HTTP response.
+
+To prevent automatic encoding of special characters in HTTP header values, you can set the http.IncomingMessage object's rawHeaders property to an array of unencoded header values. However, this is not recommended as it can open up the application to security vulnerabilities. Instead, it is recommended to properly sanitize and validate any user input that is used in response headers or response body to prevent CRLF injection attacks.
+
