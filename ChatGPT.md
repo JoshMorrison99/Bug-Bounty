@@ -86,8 +86,10 @@ Overall, the X-Forwarded-Host header is a way to maintain the proper communicati
 
 **Question 7**
 ```
-There are several reasons why a website might want to know your original IP address:
+why would a website want to know my original ip address
 ```
+
+There are several reasons why a website might want to know your original IP address:
 
 Geolocation: By knowing your IP address, a website can determine your approximate location. This can be useful for providing location-specific content or services.
 
@@ -98,3 +100,70 @@ Analytics: Websites often use IP addresses to track website traffic and usage pa
 Compliance: In some cases, websites may need to collect and store IP addresses in order to comply with legal or regulatory requirements.
 
 It's worth noting that most websites will not be able to see your original IP address if you are using a VPN (Virtual Private Network) or other anonymity tool. In this case, the website will only be able to see the IP address of the VPN server you are connected to.
+
+<br/>
+
+**Question 8**
+```
+what is the difference between the x-forwarded-for and x-real-ip?
+```
+
+The X-Forwarded-For and X-Real-IP headers are both used to pass the original client IP address to a backend server that is behind a proxy or load balancer, but they differ in their implementation and usage.
+
+The X-Forwarded-For header is a standard HTTP header that is used to pass the original client IP address to a backend server that is behind a proxy or load balancer. This header is added by the proxy or load balancer to the incoming request, containing the original IP address of the client. The backend server can then use this header to determine the original IP address of the client, in case it needs to perform IP-based access control or logging. However, the X-Forwarded-For header can be easily spoofed, as it can be set to any value by a malicious client or intermediate proxy.
+
+The X-Real-IP header, on the other hand, is a non-standard header that is used by the Nginx web server to pass the original client IP address to a backend server. This header is added by Nginx itself, based on the value of the real_ip_header directive in the Nginx configuration file. Unlike X-Forwarded-For, the X-Real-IP header cannot be easily spoofed, as it is added by a trusted source (Nginx) and is not directly modifiable by an intermediate proxy.
+
+In summary, the X-Forwarded-For header is a standard header that is widely used in the industry to pass the original client IP address, but it can be spoofed. The X-Real-IP header, on the other hand, is a non-standard header that is specific to Nginx, but it provides a more secure way to pass the original client IP address, as it cannot be easily spoofed.
+
+<br/>
+
+**Question 9**
+```
+what is the difference between x-forwarded-for and x-forwarded-host?
+```
+
+The X-Forwarded-For and X-Forwarded-Host headers serve different purposes in an HTTP request.
+
+The X-Forwarded-For header is a standard HTTP header that is used to pass the original client IP address to a backend server that is behind a proxy or load balancer. This header is added by the proxy or load balancer to the incoming request, containing the original IP address of the client. The backend server can then use this header to determine the original IP address of the client, in case it needs to perform IP-based access control or logging.
+
+The X-Forwarded-Host header, on the other hand, is not a standard HTTP header, but rather a non-standard header that is used to pass the original host name or IP address of a client to a backend server that is behind a proxy or load balancer. This header is added by the proxy or load balancer to the incoming request, containing the original host name or IP address of the client. The backend server can then use this header to determine the original host name or IP address of the client, in case it needs to generate links or perform other operations based on the original client request.
+
+The main difference between the two headers is that X-Forwarded-For is used to pass the client IP address, while X-Forwarded-Host is used to pass the client host name or IP address. They are often used together to provide a complete picture of the original client request, including the original IP address and host name.
+
+<br/>
+
+**Question 10**
+```
+what is the difference between x-forwarded-host and the Host header?
+```
+
+The Host header and the X-Forwarded-Host header serve different purposes in an HTTP request.
+
+The Host header is a mandatory HTTP request header that specifies the host name or IP address of the server that the client is requesting. This header is used by the server to determine which virtual host should handle the request, in case the server is hosting multiple virtual hosts. The Host header is sent by the client in the initial request, and it contains the original host name or IP address that the client used to make the request.
+
+The X-Forwarded-Host header, on the other hand, is not a standard HTTP header, but rather a non-standard header that is used to pass the original host name or IP address of a client to a backend server that is behind a proxy or load balancer. This header is added by the proxy or load balancer to the incoming request, containing the original host name or IP address of the client.
+
+The main difference between the two headers is that the Host header is mandatory and must be included in every HTTP request, while the X-Forwarded-Host header is optional and only needs to be included if the client is behind a proxy or load balancer.
+
+Another difference is that the Host header is typically used by the server to determine which virtual host should handle the request, while the X-Forwarded-Host header is used by the backend server to determine the original host name or IP address of the client, in case it needs to generate links or perform other operations based on the original client request.
+
+<br/>
+
+**Question 11**
+```
+why would a website want to know my original host name
+```
+
+A website may want to know your original host name for a few reasons:
+
+Security purposes: Your original host name can help the website identify and authenticate your device, which can help prevent unauthorized access and protect against potential security threats.
+
+Personalization: Knowing your original host name can allow the website to provide a more personalized experience. For example, the website may use this information to remember your preferences or to provide customized recommendations.
+
+Analytics: Websites often use data analytics tools to analyze user behavior and improve their website. Knowing your original host name can help them understand where their users are coming from and how they interact with the website.
+
+Troubleshooting: If you are experiencing issues with the website, providing your original host name can help the website's support team diagnose and fix the problem.
+
+Overall, providing your original host name can help the website provide a better and more secure user experience. However, it is always important to be cautious about sharing personal information online and to only provide information to websites that you trust.
+
