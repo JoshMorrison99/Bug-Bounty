@@ -65,3 +65,36 @@ The "lyncdiscover" subdomain is used by Microsoft Lync and Skype for Business ap
 When a user signs in to Lync or Skype for Business, the application uses the "lyncdiscover" subdomain to request the necessary configuration settings from the server. The server responds with the settings, which the application then uses to connect to the Lync or Skype for Business server and communicate with other users.
 
 The "lyncdiscover" subdomain is not required for Lync or Skype for Business to function, but it can simplify the setup process for users and make it easier for them to connect to the server. It can also be helpful for administrators who need to configure multiple Lync or Skype for Business clients, as they can use the subdomain to automatically distribute the necessary settings to all clients.
+
+<br/>
+
+**Question 6**
+```
+why would a website use the X-Forwarded-Host header?
+```
+A website might use the X-Forwarded-Host header for several reasons, but the most common reason is to properly handle requests that are forwarded from a reverse proxy or a load balancer.
+
+When a website is hosted behind a reverse proxy or load balancer, the request that comes to the website's server might include the IP address or hostname of the proxy server instead of the actual IP address or hostname of the client. This is because the client's request is intercepted and forwarded by the proxy server. In order for the website to properly handle the request, it needs to know the original hostname or IP address of the client that made the request.
+
+The X-Forwarded-Host header allows the proxy server to pass along the original hostname of the client in the request. The website can then use this information to properly handle the request and respond with the correct content or redirect the user to the correct URL.
+
+Additionally, using the X-Forwarded-Host header can help prevent security vulnerabilities such as "Host Header Attacks" which can occur when an attacker sends a request with a fake hostname to a server, tricking it to respond with sensitive information.
+
+Overall, the X-Forwarded-Host header is a way to maintain the proper communication between client and server, and improve security by ensuring the authenticity of the incoming requests.
+
+<br/>
+
+**Question 7**
+```
+There are several reasons why a website might want to know your original IP address:
+```
+
+Geolocation: By knowing your IP address, a website can determine your approximate location. This can be useful for providing location-specific content or services.
+
+Security: A website may use your IP address to help identify potential security threats, such as malicious users or bots.
+
+Analytics: Websites often use IP addresses to track website traffic and usage patterns. This information can be used to improve the website's performance or to target advertising to specific users.
+
+Compliance: In some cases, websites may need to collect and store IP addresses in order to comply with legal or regulatory requirements.
+
+It's worth noting that most websites will not be able to see your original IP address if you are using a VPN (Virtual Private Network) or other anonymity tool. In this case, the website will only be able to see the IP address of the VPN server you are connected to.
