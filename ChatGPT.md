@@ -193,6 +193,27 @@ A developer may implement a method override parameter such as "_method=POST" in 
 
 In some cases, a web application may need to perform an action that is not supported by the HTTP method currently being used. For example, a web application may need to update a resource using a PUT request, but the client's browser only supports GET and POST requests. In such cases, the developer can use the "_method" parameter to specify the desired HTTP method.
 
-By including the "_method" parameter with a value of "POST" (or another supported HTTP method), the developer can instruct the web application to treat the request as if it were a PUT (or another desired method) request instead. This is often achieved by configuring the server to look for the "_method" parameter in the request and override the HTTP method accordingly.
+By including the "`_method`" parameter with a value of "POST" (or another supported HTTP method), the developer can instruct the web application to treat the request as if it were a PUT (or another desired method) request instead. This is often achieved by configuring the server to look for the "_method" parameter in the request and override the HTTP method accordingly.
 
-Overall, using the "_method" parameter can be a useful technique for developers to support a wider range of HTTP methods in their web applications, even if the client's browser does not support them directly.
+Overall, using the "`_method`" parameter can be a useful technique for developers to support a wider range of HTTP methods in their web applications, even if the client's browser does not support them directly.
+
+<br/>
+
+**Question 14**
+```
+which browsers strip the referer header by default?
+```
+
+Several browsers have been known to strip the "referer" header by default, including:
+
+Mozilla Firefox: Since version 85, Firefox has been configured to remove the "referer" header when the user clicks on a link that takes them from an HTTPS website to an HTTP website.
+
+Apple Safari: Starting with Safari 11.1, the browser has been configured to remove the "referer" header when the user navigates from an HTTPS website to an HTTP website.
+
+Google Chrome: Chrome has been known to strip the "referer" header when the user navigates from an HTTPS website to an HTTP website.
+
+Microsoft Edge: Similar to Chrome, Edge may also strip the "referer" header when the user navigates from an HTTPS website to an HTTP website.
+
+It's worth noting that browser behavior regarding the "referer" header can vary depending on the specific version and configuration of the browser, as well as any browser extensions or add-ons that may be installed. Additionally, some privacy-focused browser extensions may also strip or modify the "referer" header to prevent tracking.
+
+
