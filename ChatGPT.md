@@ -183,3 +183,16 @@ By automatically encoding special characters in HTTP header values, Express.js i
 
 To prevent automatic encoding of special characters in HTTP header values, you can set the http.IncomingMessage object's rawHeaders property to an array of unencoded header values. However, this is not recommended as it can open up the application to security vulnerabilities. Instead, it is recommended to properly sanitize and validate any user input that is used in response headers or response body to prevent CRLF injection attacks.
 
+<br/>
+**Question 13**
+```
+why would a developer implement a method override parameter such as _method=POST?
+```
+
+A developer may implement a method override parameter such as "_method=POST" in order to support RESTful web applications that use HTTP methods such as GET, POST, PUT, DELETE, etc.
+
+In some cases, a web application may need to perform an action that is not supported by the HTTP method currently being used. For example, a web application may need to update a resource using a PUT request, but the client's browser only supports GET and POST requests. In such cases, the developer can use the "_method" parameter to specify the desired HTTP method.
+
+By including the "_method" parameter with a value of "POST" (or another supported HTTP method), the developer can instruct the web application to treat the request as if it were a PUT (or another desired method) request instead. This is often achieved by configuring the server to look for the "_method" parameter in the request and override the HTTP method accordingly.
+
+Overall, using the "_method" parameter can be a useful technique for developers to support a wider range of HTTP methods in their web applications, even if the client's browser does not support them directly.
