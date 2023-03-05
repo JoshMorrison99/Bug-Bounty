@@ -216,4 +216,16 @@ Microsoft Edge: Similar to Chrome, Edge may also strip the "referer" header when
 
 It's worth noting that browser behavior regarding the "referer" header can vary depending on the specific version and configuration of the browser, as well as any browser extensions or add-ons that may be installed. Additionally, some privacy-focused browser extensions may also strip or modify the "referer" header to prevent tracking.
 
+<br/>
+
+**Question 15**
+```
+why do many websites have port 5060 open? 
+```
+
+Port 5060 is typically associated with the Session Initiation Protocol (SIP), which is used for initiating, maintaining, modifying, and terminating real-time sessions that involve video, voice, messaging, and other communications applications and services between two or more endpoints on IP networks.
+
+Many websites may not have port 5060 open as it is not typically used for web-based services or applications. However, some websites that offer voice or video calling functionality, such as VoIP or video conferencing services, may use SIP and therefore have port 5060 open.
+
+It's also worth noting that port scanning tools like nmap or naabu may report port 5060 as open even if there is no active service listening on that port. This can happen if the network firewall or router is configured to respond to port scans with a SYN-ACK packet, even if there is no actual service running on that port. Therefore, it's important to verify whether an active SIP service is running on port 5060 before drawing any conclusions about why that port is open on a particular website or server.
 
