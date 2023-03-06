@@ -229,3 +229,17 @@ Many websites may not have port 5060 open as it is not typically used for web-ba
 
 It's also worth noting that port scanning tools like nmap or naabu may report port 5060 as open even if there is no active service listening on that port. This can happen if the network firewall or router is configured to respond to port scans with a SYN-ACK packet, even if there is no actual service running on that port. Therefore, it's important to verify whether an active SIP service is running on port 5060 before drawing any conclusions about why that port is open on a particular website or server.
 
+<br/>
+
+**Question 16**
+```
+if I receive a DNS pingback by injecting my server in the host header, does that indicate SSRF
+```
+
+Injecting your server's IP address or hostname into the Host header of a DNS request could indicate the presence of an SSRF (Server-Side Request Forgery) vulnerability, but it is not a definitive indicator by itself.
+
+SSRF occurs when an attacker can make a server send a request to a specified domain or IP address on behalf of the attacker. By manipulating the Host header of an HTTP request, an attacker can trick the server into sending a request to a different server than intended. This can allow the attacker to interact with resources that should not be accessible from the server.
+
+In the context of a DNS pingback, if your server receives a response to a DNS request that was not initiated by your server, it could indicate that an attacker was able to make your server send a request to a malicious domain or IP address. However, it is important to note that there are other legitimate reasons why a server might send DNS requests to other domains, so this alone is not conclusive evidence of an SSRF vulnerability.
+
+If you suspect that your server may be vulnerable to SSRF, it is recommended to perform a thorough security assessment to identify and address any vulnerabilities.
