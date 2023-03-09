@@ -11,3 +11,4 @@
 - https://twitter.com/hashtag/bugbountytips?src=hashtag_click
 - https://www.youtube.com/results?search_query=bug+bounty&sp=EgIIAw%253D%253D 
 - https://doepichack.com/category/tips/
+- https://www.stackhawk.com/blog/
