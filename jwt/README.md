@@ -2,7 +2,7 @@
 
 <br/>
 
-**[JWT Misconfigurations]()**
+**[JWT Misconfigurations](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/jwt/jwt%20misconfigurations.md)**
 - [ ] JWT Not being Checked
 - [ ] JWT none Algorithm Attack
 - [ ] Brute Force JWT Secret
