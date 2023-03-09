@@ -1,6 +1,7 @@
 # Bug Bounty Notes
-- **[NEW]** XSS Methodology --> https://github.com/JoshMorrison99/Bug-Bounty/tree/main/xss
-- [TODO] CSRF Methodology
+- [x] XSS Methodology --> https://github.com/JoshMorrison99/Bug-Bounty/tree/main/xss
+- [x] CSRF Methodology --> https://github.com/JoshMorrison99/Bug-Bounty/tree/main/csrf
+- [ ] Open Redirect Methodology
 
 # List of General Resources
 - https://pentester.land/writeups/
