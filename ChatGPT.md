@@ -243,3 +243,18 @@ SSRF occurs when an attacker can make a server send a request to a specified dom
 In the context of a DNS pingback, if your server receives a response to a DNS request that was not initiated by your server, it could indicate that an attacker was able to make your server send a request to a malicious domain or IP address. However, it is important to note that there are other legitimate reasons why a server might send DNS requests to other domains, so this alone is not conclusive evidence of an SSRF vulnerability.
 
 If you suspect that your server may be vulnerable to SSRF, it is recommended to perform a thorough security assessment to identify and address any vulnerabilities.
+
+<br/>
+
+**Question 17**
+```
+why is it a vulnerability to store credentials in plain text on an iOS application. Attackers cannot get the credentials unless they steal your phone right?
+```
+
+Storing credentials in plain text on an iOS application is a vulnerability because it can make it easier for attackers to gain unauthorized access to the user's account or sensitive information.
+
+While it is true that an attacker would need physical access to the user's phone to obtain the plaintext credentials stored in the application, there are still scenarios where this vulnerability can be exploited. For example, if the phone is lost or stolen, anyone who finds or steals the phone could potentially access the plaintext credentials stored in the application.
+
+Moreover, even if an attacker does not have physical access to the phone, there are still ways they could potentially exploit this vulnerability. For instance, if the user's phone is jailbroken, an attacker could gain access to the file system and extract the plaintext credentials from the application's storage. Additionally, if the user's phone is infected with malware, the malware could potentially access the plaintext credentials stored in the application.
+
+Therefore, it is important for iOS application developers to implement secure credential storage practices, such as using encryption or keychain services provided by iOS, to protect users' sensitive information from unauthorized access.
