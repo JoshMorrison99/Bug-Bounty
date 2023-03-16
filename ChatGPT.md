@@ -258,3 +258,16 @@ While it is true that an attacker would need physical access to the user's phone
 Moreover, even if an attacker does not have physical access to the phone, there are still ways they could potentially exploit this vulnerability. For instance, if the user's phone is jailbroken, an attacker could gain access to the file system and extract the plaintext credentials from the application's storage. Additionally, if the user's phone is infected with malware, the malware could potentially access the plaintext credentials stored in the application.
 
 Therefore, it is important for iOS application developers to implement secure credential storage practices, such as using encryption or keychain services provided by iOS, to protect users' sensitive information from unauthorized access.
+
+**Question 18**<br/>
+```
+what is the purpose of the "vary" response header?
+```
+
+The "Vary" response header is used by a web server to specify which request headers it uses to determine whether a particular cached response can be used for a subsequent request. When a browser sends a request to a web server, it includes a set of request headers that describe the type of content it is expecting to receive in response.
+
+If the server has a cached response for the requested resource, it needs to determine whether that cached response can be used for the current request or if a new response needs to be generated. The "Vary" header allows the server to specify which request headers it uses to make this determination.
+
+For example, if a server caches a response to a request that includes an "Accept-Encoding" header that specifies "gzip", it can include a "Vary: Accept-Encoding" header in the response. This tells the browser that the server only wants to use this cached response if the subsequent request includes the same "Accept-Encoding" header.
+
+By specifying the "Vary" header, the server can ensure that the correct response is served to the client, avoiding issues such as serving the wrong content to users or potentially leaking private information to unauthorized parties.
