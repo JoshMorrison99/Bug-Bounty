@@ -1,7 +1,10 @@
-**Step 1**
+**Step 1**<br/>
 Search for parts of the application where sensitive information is being reflected in the response, such as session cookies, email, etc.
 
-**Step 2**
+<br/>
+<br/>
+
+**Step 2**<br/>
 Try to cache the sensitive information
 - [ ] Check for cachable Apache path normalization `GET //blog`
 - [ ] Check for cachable Nginx path normalization `GET /blog%3F`
