@@ -2,7 +2,7 @@
 - [x] [XSS Methodology](https://github.com/JoshMorrison99/Bug-Bounty/tree/main/xss)
 - [x] [CSRF Methodology](https://github.com/JoshMorrison99/Bug-Bounty/tree/main/csrf)
 - [ ] Open Redirect Methodology
-- [ ] Cache Poisoning Methodology
+- [x] [Cache Poisoning Methodology](https://github.com/JoshMorrison99/Bug-Bounty/tree/main/Cache%20Poisoning)
 - [ ] Cache Deception Methodology
 - [ ] JWT Methodology
 
