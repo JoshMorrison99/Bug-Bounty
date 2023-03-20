@@ -8,7 +8,7 @@ The first thing to check in a CSRF attack is the security headers on the session
 <br/>
 <br/>
 
-**[CSRF Token Bypasses](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/csrf/csrf%20bypasses.md)**<br/>
+**[CSRF Token Bypasses](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/CSRF/CSRF%20Token%20Bypasses.md)**<br/>
 - [ ] Change single character to check if CSRF token is being validated or not
 - [ ] Change request method from POST to GET
 - [ ] Remove value in CSRF token
@@ -18,7 +18,7 @@ The first thing to check in a CSRF attack is the security headers on the session
 <br/>
 <br/>
 
-**[Referer Bypasses](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/csrf/referer%20bypasses.md)**<br/>
+**[Referer Bypasses](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/CSRF/Referer%20Bypasses.md)**<br/>
 - [ ] Check for bad regex
 - [ ] Check for referer removed
 
