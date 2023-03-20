@@ -1,5 +1,5 @@
 **Step 1**<br/>
-Find self-XSS in headers using this script. It is better to try for XSS in cookies.
+Find self-XSS in headers using this [script](https://github.com/JoshMorrison99/Bug-Bounty/blob/main/Cache%20Poisoning/reflected-headers.yaml). It is better to try for XSS in cookies.
 
 <br/>
 <br/>
