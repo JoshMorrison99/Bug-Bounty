@@ -5,6 +5,7 @@
 - [x] [Cache Poisoning Methodology](https://github.com/JoshMorrison99/Bug-Bounty/tree/main/Cache%20Poisoning)
 - [ ] Cache Deception Methodology
 - [ ] JWT Methodology
+- [x] [HPP Methodology](https://github.com/JoshMorrison99/Bug-Bounty/tree/main/HPP)
 
 # List of General Resources
 - https://pentester.land/writeups/
