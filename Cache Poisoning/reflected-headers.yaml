@@ -1,0 +1,67 @@
+id: reflected-parameters
+
+info:
+  name: Reflected Parameters
+  author: shelled
+  severity: info
+  tags: xss,cache
+
+requests:
+  - raw:
+      - |
+        GET /?cb=1 HTTP/1.1
+        Host: {{Hostname}}
+        Referer: {{reflection}}
+        Accept: {{reflection}}
+        Accept-Charset: {{reflection}}
+        Accept-Datetime: {{reflection}}
+        Accept-Encoding: {{reflection}}
+        Accept-Language: {{reflection}}
+        Authorization: {{reflection}}
+        Cache-Control: {{reflection}}
+        Connection: {{reflection}}
+        Content-Length: {{reflection}}
+        Content-MD5: {{reflection}}
+        Content-Type: {{reflection}}
+        Cookie: test={{reflection}}
+        Date: {{reflection}}
+        Forwarded: {{reflection}}
+        From: {{reflection}}
+        User-Agent: {{reflection}}
+        Via: {{reflection}}
+        DNT: {{reflection}}
+        Front-End-Https: {{reflection}}
+        Proxy-Connection: {{reflection}}
+        X-Forwarded-For: {{reflection}}
+        X-Forwarded-Host: {{reflection}}
+        X-Forwarded-Proto: {{reflection}}
+        X-Http-Method-Override: {{reflection}}
+        X-ProxyUser-Ip: {{reflection}}
+        X-Request-ID: {{reflection}}
+        X-Requested-With: {{reflection}}
+        Client-IP: {{reflection}}
+        True-Client-IP: {{reflection}}
+        Cluster-Client-IP: {{reflection}}
+        X-Host: {{reflection}}
+        X-Forwarded-Prefix: {{reflection}}
+        Fastly-Host: {{reflection}}
+        Acunetix-Header: {{reflection}}
+        Fastly-SSL: {{reflection}}
+        X-Rewrite-Url: {{reflection}}
+
+    payloads:
+      reflection:
+        - 'shelled'
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "{{reflection}}"
+
+      - type: word
+        part: header
+        words:
+          - "text/html"
+
