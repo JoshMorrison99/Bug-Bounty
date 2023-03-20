@@ -1,0 +1,11 @@
+- https://infosecwriteups.com/how-i-made-15-000-by-hacking-caching-servers-part-1-5541712a61c3
+- https://infosecwriteups.com/how-i-made-16-500-hacking-cdn-caching-servers-part-2-4995ece4c6e6
+- https://medium.com/bugbountywriteup/how-i-made-16-500-hacking-cdn-caching-servers-part-3-91f9d836e046
+- https://medium.com/@bxmbn/how-i-test-for-web-cache-vulnerabilities-tips-and-tricks-9b138da08ff9
+- https://youst.in/posts/cache-poisoning-at-scale/
+- https://portswigger.net/research/practical-web-cache-poisoning
+- https://portswigger.net/research/web-cache-entanglement
+- https://portswigger.net/research/bypassing-web-cache-poisoning-countermeasures
+- https://portswigger.net/research/responsible-denial-of-service-with-web-cache-poisoning
+- https://portswigger.net/research/web-cache-poisoning
+- https://blog.cloudflare.com/cache-poisoning-protection/
