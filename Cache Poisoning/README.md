@@ -25,6 +25,7 @@ Try to cache the self-xss by doing the following:
 **When to Give up**<br/>
 - [ ]  Cache-Control: no-cache, must-revalidate
 - [ ]  Cache-Control: no-cache, private
+- [ ]  Cf-Cache-Status: DYNAMIC
 - [ ]  If the target is Cloudflare and the XSS is in the following then cache poisoning is not possible because those values become part of the cache key if they differ from the origin server.:
 	- `x-forwarded-host`
 	- `x-host`
