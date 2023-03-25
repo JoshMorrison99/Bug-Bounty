@@ -15,5 +15,6 @@
 - https://twitter.com/hashtag/Bugbounty?src=hashtag_click
 - https://twitter.com/hashtag/bugbountytips?src=hashtag_click
 - https://www.youtube.com/results?search_query=bug+bounty&sp=EgIIAw%253D%253D 
-- https://doepichack.com/category/tips/
-- https://www.stackhawk.com/blog/
+- https://github.com/KathanP19/HowToHunt
+- https://github.com/daffainfo/AllAboutBugBounty
+- https://github.com/0xmaximus/Galaxy-Bugbounty-Checklist
