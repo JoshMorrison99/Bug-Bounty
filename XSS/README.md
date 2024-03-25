@@ -47,3 +47,6 @@ I will generally manually check each site as I can perform more thorough testing
 cat urls.txt | ./kxss
 ```
 
+---
+
+For testing `Blind XSS` I will use this website with the payloads provided: https://xss.report/. Here is list of places to test for `Blind XSS`.
